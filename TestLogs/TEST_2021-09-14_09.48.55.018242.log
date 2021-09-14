@@ -1,0 +1,3 @@
+2021-09-14 at 09:48:55 | INFO | apollo_helpers.py::inner1
+2021-09-14 at 09:48:55 | INFO | POST /login - Positive Test
+2021-09-14 at 09:48:55 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'Response' object has no attribute 'body'

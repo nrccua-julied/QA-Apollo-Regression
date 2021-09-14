@@ -1,0 +1,21 @@
+2021-08-12 at 13:02:21 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 13:02:21 | INFO | POST /register - Positive Test
+2021-08-12 at 13:02:25 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-08-12 at 13:02:25 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 13:02:37 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-08-12 at 13:02:37 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 13:02:37 | INFO | POST /verify-user - Positive Test
+2021-08-12 at 13:02:40 | WARNING | test_post_verify_user -- dev: Return code not what was expected: 400 != 201
+2021-08-12 at 13:02:40 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: None
+2021-08-12 at 13:02:40 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 13:02:40 | INFO | POST /authenticatev2 - Positive Test
+2021-08-12 at 13:02:41 | WARNING | test_post_authenticatev2 -- dev: Return code not what was expected: 400 != 201
+2021-08-12 at 13:02:41 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: None
+2021-08-12 at 13:02:41 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 13:02:41 | INFO | POST /request-password - Positive Test
+2021-08-12 at 13:02:42 | WARNING | test_post_request_password -- dev: Return code not what was expected: 400 != 201
+2021-08-12 at 13:02:42 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: None
+2021-08-12 at 13:02:42 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 13:02:42 | INFO | POST /confirm-password - Positive Test
+2021-08-12 at 13:02:44 | WARNING | test_post_confirm_password -- dev: Return code not what was expected: 400 != 201
+2021-08-12 at 13:02:44 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: None
