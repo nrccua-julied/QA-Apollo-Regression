@@ -34,7 +34,82 @@ token = "0"
 #    assert(response.status_code, 200)
 
 
-# @pytest.mark.skipif(apollo_helpers.ENVNAME == 'prod', reason='data creation')
+@logTestName
+def test_post_login_ACT():
+    logger.info("POST /login - Positive Test")
+
+    mutation = """ mutation ($username: String!, $password: String!) 
+    {
+    login(input: {username:$username, password:$password})
+        {
+        token
+        profileId
+        }
+    }
+    """
+    variables = {
+    "username": "nrccua.signup+202108042@gmail.com",
+    "password": "Password1!"}
+
+    response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
+    print(response.text)
+    json_response = response.json()
+    print (json_response["data"]["login"]["token"])
+    token = (json_response["data"]["login"]["token"])
+    assert response.status_code == 200
+
+
+
+@logTestName
+def test_post_profile_ACT():
+    logger.info("POST /profile - Positive Test")
+    head = {
+        'Authorization': 'bearer ' + token
+    }
+
+    query = """ query 
+    {
+    myProfile 
+        {
+        profileId
+        userAccount
+            {
+            userName
+            isFederatedUser
+            identityProvider
+            actId
+            personId
+            }
+        identity
+            {
+            firstName
+            lastName
+            dateOfBirth
+            accountName
+            }
+        contact 
+            {
+            homeAddress
+                {
+                city
+                state
+                stateCode
+                countryCode
+                postalCode
+                }
+            email
+            }
+        }	
+    }
+    """
+
+    response = requests.post('https://dev-aigr.act-et.org/graphql',
+                             json={'query': query, 'headers': head})
+    print(response.text)
+    assert response.status_code == 200
+
+
+
 @logTestName
 def test_post_register_ACT():
     logger.info("POST /register - Positive Test")
@@ -143,30 +218,8 @@ def test_post_resendverification_ACT():
     assert response.status_code == 200
 
 
-# @pytest.mark.skipif(apollo_helpers.ENVNAME == 'prod', reason='data creation')
-@logTestName
-def test_post_login_ACT():
-    logger.info("POST /login - Positive Test")
 
-    mutation = """ mutation ($username: String!, $password: String!) 
-    {
-    login(input: {username:$username, password:$password})
-        {
-        token
-        profileId
-        }
-    }
-    """
-    variables = {
-    "username": "nrccua.signup+202108042@gmail.com",
-    "password": "Password1!"}
 
-    response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
-    print(response.text)
-    json_response = response.json()
-    print (json_response["data"]["login"]["token"])
-    token = (json_response["data"]["login"]["token"])
-    assert response.status_code == 200
 
 
 # @pytest.mark.skipif(apollo_helpers.ENVNAME == 'prod', reason='data creation')
@@ -265,51 +318,3 @@ def test_post_loginwithnewpassword_ACT():
 
 
 
-
-@logTestName
-def test_post_profile_ACT():
-    logger.info("POST /profile - Positive Test")
-    head = {
-        'Authorization': 'bearer ' + token
-    }
-
-    query = """ query 
-    {
-    myProfile 
-        {
-        profileId
-        userAccount
-            {
-            userName
-            isFederatedUser
-            identityProvider
-            actId
-            personId
-            }
-        identity
-            {
-            firstName
-            lastName
-            dateOfBirth
-            accountName
-            }
-        contact 
-            {
-            homeAddress
-                {
-                city
-                state
-                stateCode
-                countryCode
-                postalCode
-                }
-            email
-            }
-        }	
-    }
-    """
-
-    response = requests.post('https://dev-aigr.act-et.org/graphql',
-                             json={'query': query, 'headers': head})
-    print(response.text)
-    assert response.status_code == 200
