@@ -1,0 +1,3 @@
+2021-09-16 at 12:49:27 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 12:49:27 | INFO | POST /login - Positive Test
+2021-09-16 at 12:49:28 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: string indices must be integers
