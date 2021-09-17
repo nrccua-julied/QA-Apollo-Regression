@@ -13,27 +13,6 @@ vc = "123456"
 token = "0"
 
 
-
-# @pytest.mark.skipif(apollo_helpers.ENVNAME == 'prod', reason='data creation')
-#@logTestName
-#def test_post_login():
-#    logger.info("POST /login - Positive Test")
-
-#    mutation = """mutation
-#    {
-#        login(input:
-#        {username:"nrccua.signup+202108042@gmail.com",password:"Password1!"})
-#        {
-#            token
-#        }
-#    }
-#    """
-
-#    response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation})
-#    print(response.text)
-#    assert(response.status_code, 200)
-
-
 @logTestName
 def test_post_login_ACT():
     logger.info("POST /login - Positive Test")
@@ -64,7 +43,7 @@ def test_post_login_ACT():
 def test_post_profile_ACT():
     logger.info("POST /profile - Positive Test")
     head = {
-        'Authorization': 'bearer ' + token
+        "Authorization": "bearer " + token
     }
 
     query = """ query 
@@ -103,8 +82,7 @@ def test_post_profile_ACT():
     }
     """
 
-    response = requests.post('https://dev-aigr.act-et.org/graphql',
-                             json={'query': query, 'headers': head})
+    response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': query}, headers=head)
     print(response.text)
     assert response.status_code == 200
 
