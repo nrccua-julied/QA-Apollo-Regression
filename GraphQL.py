@@ -11,6 +11,7 @@ TS = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
 newuemailname = "nrccua.signup+" + TS + "@gmail.com"
 vc = "123456"
 token = "0"
+profileid = "0"
 
 
 @logTestName
@@ -34,9 +35,10 @@ def test_post_login_ACT():
     print(response.text)
     json_response = response.json()
     print (json_response["data"]["login"]["token"])
+    global token
     token = (json_response["data"]["login"]["token"])
     assert response.status_code == 200
-
+    assert (token != '')
 
 
 @logTestName
@@ -84,7 +86,10 @@ def test_post_profile_ACT():
 
     response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': query}, headers=head)
     print(response.text)
+    json_response = response.json()
+    profileid = (json_response["data"]["myProfile"]["profileId"])
     assert response.status_code == 200
+    assert (profileid != '')
 
 
 
@@ -126,7 +131,10 @@ def test_post_register_ACT():
 }
     response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
     print(response.text)
+    json_response = response.json()
+    profileID = (json_response["data"]["registerUser"]["profileId"])
     assert response.status_code == 200
+    assert (profileID != '')
     print (newuemailname)
 
 @logTestName
@@ -167,7 +175,10 @@ def test_post_verifyuser_ACT():
     }
     response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
     print(response.text)
+    json_response = response.json()
+    message = (json_response["data"]["verifyUser"]["message"])
     assert response.status_code == 200
+    assert (message == 'Account verified successfully')
 
 
 # @pytest.mark.skipif(apollo_helpers.ENVNAME == 'prod', reason='data creation')
@@ -193,7 +204,10 @@ def test_post_resendverification_ACT():
     response = requests.post('https://dev-aigr.act-et.org/graphql',
                              json={'query': mutation, 'variables': variables})
     print(response.text)
+    json_response = response.json()
+    message = (json_response["data"]["resendUserAccountVerificationCode"]["message"])
     assert response.status_code == 200
+    assert (message == 'Verification code resent successfully.')
 
 
 
@@ -222,7 +236,10 @@ def test_post_forgotpassword_ACT():
 
     response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
     print(response.text)
+    json_response = response.json()
+    message = (json_response["data"]["forgotPassword"]["message"])
     assert response.status_code == 200
+    assert (message == "A password reset notification has been sent to your EMAIL")
 
 
 @logTestName
@@ -265,7 +282,10 @@ def test_post_completeforgotpassword_ACT():
 
     response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
     print(response.text)
+    json_response = response.json()
+    message = (json_response["data"]["completeForgotPassword"]["message"])
     assert response.status_code == 200
+    assert (message == "Password changed successfully.")
 
 
 
@@ -292,7 +312,8 @@ def test_post_loginwithnewpassword_ACT():
     print(response.text)
     json_response = response.json()
     print(json_response["data"]["login"]["token"])
+    token = (json_response["data"]["login"]["token"])
     assert response.status_code == 200
-
+    assert (token != '')
 
 

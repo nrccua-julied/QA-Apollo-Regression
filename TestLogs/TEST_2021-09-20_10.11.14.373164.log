@@ -1,0 +1,10 @@
+2021-09-20 at 10:11:14 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:11:14 | INFO | POST /login - Positive Test
+2021-09-20 at 10:11:16 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 10:11:16 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:11:16 | INFO | POST /profile - Positive Test
+2021-09-20 at 10:11:16 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'MyProfile'
+2021-09-20 at 10:11:16 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:11:16 | INFO | POST /register - Positive Test
+2021-09-20 at 10:11:21 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: name 'json_response' is not defined
+2021-09-20 at 10:11:21 | INFO | apollo_helpers.py::inner1

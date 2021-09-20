@@ -1,0 +1,28 @@
+2021-09-20 at 10:15:07 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:15:07 | INFO | POST /login - Positive Test
+2021-09-20 at 10:15:08 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 10:15:08 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:15:08 | INFO | POST /profile - Positive Test
+2021-09-20 at 10:15:08 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'NoneType' object is not subscriptable
+2021-09-20 at 10:15:09 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:15:09 | INFO | POST /register - Positive Test
+2021-09-20 at 10:15:11 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 10:15:11 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:15:31 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 10:15:31 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:15:31 | INFO | POST /verifyuser - Positive Test
+2021-09-20 at 10:15:34 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 10:15:34 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:15:34 | INFO | POST /resendverification - Positive Test
+2021-09-20 at 10:15:36 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'NoneType' object is not subscriptable
+2021-09-20 at 10:15:36 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:15:36 | INFO | POST /forgotpassword - Positive Test
+2021-09-20 at 10:15:39 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 10:15:39 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:16:04 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 10:16:04 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:16:04 | INFO | POST /completeforgotpassword - Positive Test
+2021-09-20 at 10:16:06 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 10:16:06 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:16:06 | INFO | POST /loginwithnewpassword - Positive Test
+2021-09-20 at 10:16:07 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

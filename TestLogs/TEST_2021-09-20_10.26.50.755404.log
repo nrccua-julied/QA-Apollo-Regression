@@ -1,0 +1,8 @@
+2021-09-20 at 10:26:50 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:26:50 | INFO | POST /login - Positive Test
+2021-09-20 at 10:26:52 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 10:26:52 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:26:52 | INFO | POST /profile - Positive Test
+2021-09-20 at 10:26:52 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: name 'token' is not defined
+2021-09-20 at 10:26:52 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 10:26:52 | INFO | POST /register - Positive Test
