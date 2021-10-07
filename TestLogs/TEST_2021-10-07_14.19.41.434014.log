@@ -1,0 +1,3 @@
+2021-10-07 at 14:19:41 | INFO | apollo_helpers.py::inner1
+2021-10-07 at 14:19:41 | INFO | POST /register - Positive Test
+2021-10-07 at 14:20:04 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: SEARCH command error: BAD [b'Could not parse command']

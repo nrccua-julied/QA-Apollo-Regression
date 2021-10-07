@@ -1,0 +1,28 @@
+2021-10-04 at 11:56:50 | INFO | apollo_helpers.py::inner1
+2021-10-04 at 11:56:50 | INFO | POST /login - Positive Test
+2021-10-04 at 11:56:51 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-04 at 11:56:51 | INFO | apollo_helpers.py::inner1
+2021-10-04 at 11:56:51 | INFO | POST /profile - Positive Test
+2021-10-04 at 11:56:51 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-04 at 11:56:51 | INFO | apollo_helpers.py::inner1
+2021-10-04 at 11:56:51 | INFO | POST /register - Positive Test
+2021-10-04 at 11:56:53 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-04 at 11:56:53 | INFO | apollo_helpers.py::inner1
+2021-10-04 at 12:01:38 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-04 at 12:01:38 | INFO | apollo_helpers.py::inner1
+2021-10-04 at 12:01:38 | INFO | POST /verifyuser - Positive Test
+2021-10-04 at 12:01:41 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'NoneType' object is not subscriptable
+2021-10-04 at 12:01:41 | INFO | apollo_helpers.py::inner1
+2021-10-04 at 12:01:41 | INFO | POST /resendverification - Positive Test
+2021-10-04 at 12:01:44 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-04 at 12:01:44 | INFO | apollo_helpers.py::inner1
+2021-10-04 at 12:01:44 | INFO | POST /forgotpassword - Positive Test
+2021-10-04 at 12:01:47 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert ('Cannot reset password for the user as there is no registered/verified email '\n 'or phone_number') == 'A password reset notification has been sent to your EMAIL'
+2021-10-04 at 12:01:47 | INFO | apollo_helpers.py::inner1
+2021-10-04 at 12:02:05 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-04 at 12:02:05 | INFO | apollo_helpers.py::inner1
+2021-10-04 at 12:02:05 | INFO | POST /completeforgotpassword - Positive Test
+2021-10-04 at 12:02:07 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'NoneType' object is not subscriptable
+2021-10-04 at 12:02:07 | INFO | apollo_helpers.py::inner1
+2021-10-04 at 12:02:07 | INFO | POST /loginwithnewpassword - Positive Test
+2021-10-04 at 12:02:08 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'NoneType' object is not subscriptable

@@ -1,0 +1,28 @@
+2021-09-22 at 12:12:12 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:12:12 | INFO | POST /login - Positive Test
+2021-09-22 at 12:12:16 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:12:16 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:12:16 | INFO | POST /profile - Positive Test
+2021-09-22 at 12:12:16 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:12:16 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:12:16 | INFO | POST /register - Positive Test
+2021-09-22 at 12:12:24 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:12:24 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:12:47 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:12:47 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:12:47 | INFO | POST /verifyuser - Positive Test
+2021-09-22 at 12:12:49 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:12:49 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:12:49 | INFO | POST /resendverification - Positive Test
+2021-09-22 at 12:12:52 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'NoneType' object is not subscriptable
+2021-09-22 at 12:12:52 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:12:52 | INFO | POST /forgotpassword - Positive Test
+2021-09-22 at 12:12:56 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:12:56 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:13:21 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:13:21 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:13:21 | INFO | POST /completeforgotpassword - Positive Test
+2021-09-22 at 12:13:22 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:13:22 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:13:22 | INFO | POST /loginwithnewpassword - Positive Test
+2021-09-22 at 12:13:23 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

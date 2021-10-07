@@ -1,0 +1,28 @@
+2021-09-16 at 12:14:11 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 12:14:11 | INFO | POST /register - Positive Test
+2021-09-16 at 12:14:20 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 12:14:20 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 12:16:26 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 12:16:26 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 12:16:26 | INFO | POST /verifyuser - Positive Test
+2021-09-16 at 12:16:28 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 12:16:28 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 12:16:28 | INFO | POST /resendverification - Positive Test
+2021-09-16 at 12:16:30 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 12:16:30 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 12:16:30 | INFO | POST /login - Positive Test
+2021-09-16 at 12:16:31 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 12:16:31 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 12:16:31 | INFO | POST /forgotpassword - Positive Test
+2021-09-16 at 12:16:35 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 12:16:35 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 12:18:10 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 12:18:10 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 12:18:10 | INFO | POST /completeforgotpassword - Positive Test
+2021-09-16 at 12:18:12 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 12:18:12 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 12:18:12 | INFO | POST /loginwithnewpassword - Positive Test
+2021-09-16 at 12:18:12 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'Response' object has no attribute 'token'
+2021-09-16 at 12:18:13 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 12:18:13 | INFO | POST /profile - Positive Test
+2021-09-16 at 12:18:13 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: name 'token' is not defined

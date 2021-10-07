@@ -1,0 +1,3 @@
+2021-09-20 at 14:30:31 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 14:30:31 | INFO | POST /login - Positive Test
+2021-09-20 at 14:30:33 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert [{'message': 'Incorrect username or password.'},\n {'message': 'Cannot return null for non-nullable field Mutation.login.'}] == 'Incorrect username or password.'

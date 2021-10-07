@@ -20,7 +20,7 @@ config.read('envconfig.ini')
 # assign environment and user variables
 environ = config[ENVNAME]['xApiKey']
 envUrl = config[ENVNAME]['baseUrl']
-
+graphQL = config[ENVNAME]['graphQLurl']
 
 # name of test in progress
 TESTNAME = ''
@@ -131,7 +131,7 @@ def get(url):
 
 # shortcut for POST
 def post(url, payload):
-    response = requests.post(envUrl + url, headers=heads(), json=payload)
+    response = requests.post(ecqa_helpers.envUrl, headers=heads(), json=payload)
     for _ in range(3):
         if response.status_code != 504:
             break

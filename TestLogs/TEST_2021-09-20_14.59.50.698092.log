@@ -1,0 +1,12 @@
+2021-09-20 at 14:59:50 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 14:59:50 | INFO | POST /login - Positive Test
+2021-09-20 at 14:59:51 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 14:59:51 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 14:59:51 | INFO | POST /register - Positive Test
+2021-09-20 at 14:59:53 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 14:59:53 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 14:59:53 | INFO | POST /register2 - Positive Test
+2021-09-20 at 14:59:58 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-20 at 14:59:58 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 14:59:58 | INFO | POST /login2 - Positive Test
+2021-09-20 at 14:59:59 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert 'User is not confirmed.' == 'Incorrect username or password.'

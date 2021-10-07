@@ -6,13 +6,17 @@ import tkinter as tk
 from tkinter import simpledialog
 import datetime
 import requests
+import imaplib
+import smtplib
+import email
+import time
 import json
 TS = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
 newuemailname = "nrccua.signup+" + TS + "@gmail.com"
 vc = "123456"
 token = "0"
 profileid = "0"
-
+vcode = ''
 
 @logTestName
 def test_post_login_ACT():
@@ -31,7 +35,7 @@ def test_post_login_ACT():
     "username": "nrccua.signup+202108042@gmail.com",
     "password": "Password1!"}
 
-    response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
+    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
     print(response.text)
     json_response = response.json()
     print (json_response["data"]["login"]["token"])
@@ -39,6 +43,7 @@ def test_post_login_ACT():
     token = (json_response["data"]["login"]["token"])
     assert response.status_code == 200
     assert (token != '')
+
 
 
 @logTestName
@@ -84,7 +89,7 @@ def test_post_profile_ACT():
     }
     """
 
-    response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': query}, headers=head)
+    response = requests.post(apollo_helpers.graphQL, json={'query': query}, headers=head)
     print(response.text)
     json_response = response.json()
     profileid = (json_response["data"]["myProfile"]["profileId"])
@@ -92,9 +97,59 @@ def test_post_profile_ACT():
     assert (profileid != '')
 
 
+@logTestName
+def test_post_useraccountexists_ACT():
+    logger.info("POST /useraccountexists - Positive Test")
+
+    query = """ query 
+    userAccountExists($username: String!)
+    {
+    userAccountExists(username: $username)
+    }
+    """
+    variables = {
+    "username": newuemailname}
+
+    response = requests.post(apollo_helpers.graphQL, json={'query': query, 'variables': variables})
+    print(response.text)
+    json_response = response.json()
+    print (json_response["data"]["userAccountExists"])
+    global status
+    status = (json_response["data"]["userAccountExists"])
+    assert response.status_code == 200
+    assert (status != 'true')
+
+@logTestName
+def test_post_postalcodeinfo_ACT():
+    logger.info("POST /postalcodeinfo - Positive Test")
+
+    query = """ query 
+    postalCodeInfoQuery($postalCode: String!) 
+    {
+    postalCodeInfo(postalCode:$postalCode)
+        {
+        city
+        stateCode
+        postalCode
+        }
+    }
+    """
+    variables = {
+        "postalCode": "52240"}
+
+    response = requests.post(apollo_helpers.graphQL, json={'query': query, 'variables': variables})
+    print(response.text)
+    json_response = response.json()
+    print(json_response["data"]["postalCodeInfo"]["stateCode"])
+    global sc
+    sc = (json_response["data"]["postalCodeInfo"]["stateCode"])
+    assert response.status_code == 200
+    assert (sc == 'IA')
+
 
 @logTestName
 def test_post_register_ACT():
+    global vcode
     logger.info("POST /register - Positive Test")
 
     mutation = """ mutation ($email: String!, $password: String!) 
@@ -104,18 +159,18 @@ def test_post_register_ACT():
         email:$email
         firstName: "Test"
         lastName: "User"
-        middleName:"D"
+        middleName:""
         password:$password
         dateOfBirth:"12/30/2001"
         communicationPreference:EMAIL
-        addressCity:"Iowa City"
-        addressState:"Iowa"
-        addressStateCode:"IA"
-        addressCountry:"United States"
+        addressCity:""
+        addressState:""
+        addressStateCode:""
+        addressCountry:""
         addressCountryCode: "US"
         addressPostalCode: "52240"
-        addressStreet1: "111 2nd Street"
-        phone:"+123456789"
+        addressStreet1: ""
+        phone:""
         tncVersion: "2B51CDDB-9CD2-11E8-9D82-0A8F77C6E070"})
         {
         username
@@ -127,9 +182,9 @@ def test_post_register_ACT():
 
     variables = {
     "email": newuemailname,
-    "password": "Password1!}"
+    "password": "Password1!"
 }
-    response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
+    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
     print(response.text)
     json_response = response.json()
     profileID = (json_response["data"]["registerUser"]["profileId"])
@@ -137,17 +192,49 @@ def test_post_register_ACT():
     assert (profileID != '')
     print (newuemailname)
 
-@logTestName
-def test_verification_code():
-    global vc
-    vc = simpledialog.askstring(title="Verification Code",
-                                      prompt="What's your Verification Code?:")
-    # check it out
-    print(vc)
-    vc = str(vc)
-ROOT = tk.Tk()
 
-ROOT.withdraw()
+    # Give the email some time to arrive
+    time.sleep(20)
+
+    #semail = 'NRCCUA.SIGNUP+20211007160636@GMAIL.COM'
+    #Retrieve the 6 digit verification code through email
+    mail=imaplib.IMAP4_SSL("imap.gmail.com")
+    mail.login('nrccua.signup@gmail.com','Nrccua1!')
+    mail.select('inbox')
+    amt = len(mail.search(None, "ALL")[1][0].split())
+    #print(amt)
+    for i in range(amt, amt - 10, -1):
+        try:
+            data = mail.fetch(str(i), "(RFC822)")
+            msg = email.message_from_string(str(data[1][0][1], "utf-8"))
+            if (
+                newuemailname.upper() in msg["to"]
+                and "Activate ACT Account" in msg["subject"]
+            ):
+                body = msg.get_payload()[0].get_payload()
+                print(body)
+                vcode = body[body.find("verification code:") + 19:]
+                for j in range(0, len(vcode)):
+                    if vcode[j].isnumeric():
+                        vcode = vcode[j: j + 6]
+                        break
+                print (vcode)
+        except Exception:
+            continue
+
+    vcode = str(vcode)
+
+#@logTestName
+#def test_verification_code():
+#    global vc
+#    vc = simpledialog.askstring(title="Verification Code",
+#                                      prompt="What's your Verification Code?:")
+    # check it out
+#    print(vc)
+#    vc = str(vc)
+#ROOT = tk.Tk()
+
+#ROOT.withdraw()
     # the input dialog
 
 
@@ -171,9 +258,9 @@ def test_post_verifyuser_ACT():
 
     variables = {
     "username": newuemailname,
-    "verificationCode": vc
+    "verificationCode": vcode
     }
-    response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
+    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
     print(response.text)
     json_response = response.json()
     message = (json_response["data"]["verifyUser"]["message"])
@@ -199,9 +286,9 @@ def test_post_resendverification_ACT():
     """
 
     variables = {
-        "username": "nrccua.signup+202108044@gmail.com"
+        "username": "nrccua.signup+202108062@gmail.com"
     }
-    response = requests.post('https://dev-aigr.act-et.org/graphql',
+    response = requests.post(apollo_helpers.graphQL,
                              json={'query': mutation, 'variables': variables})
     print(response.text)
     json_response = response.json()
@@ -218,7 +305,7 @@ def test_post_resendverification_ACT():
 @logTestName
 def test_post_forgotpassword_ACT():
     logger.info("POST /forgotpassword - Positive Test")
-
+    global vcode
     mutation = """ mutation ($username: String!) 
     {
     forgotPassword(input: 
@@ -234,25 +321,57 @@ def test_post_forgotpassword_ACT():
     "username": newuemailname
     }
 
-    response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
+    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
     print(response.text)
     json_response = response.json()
     message = (json_response["data"]["forgotPassword"]["message"])
     assert response.status_code == 200
     assert (message == "A password reset notification has been sent to your EMAIL")
 
+    # Give the email some time to arrive
+    time.sleep(20)
 
-@logTestName
-def test_verification_code2():
-    global vc
-    vc = simpledialog.askstring(title="Verification Code",
-                                      prompt="What's your Verification Code?:")
-    # check it out
-    print(vc)
-    vc = str(vc)
-ROOT = tk.Tk()
+    #Retrieve the 6 digit verification code through email
+    mail=imaplib.IMAP4_SSL("imap.gmail.com")
+    mail.login('nrccua.signup@gmail.com','Nrccua1!')
+    mail.select('inbox')
+    amt = len(mail.search(None, "ALL")[1][0].split())
+    #print(amt)
+    for i in range(amt, amt - 10, -1):
+        try:
+            data = mail.fetch(str(i), "(RFC822)")
+            msg = email.message_from_string(str(data[1][0][1], "utf-8"))
+            if (
+                newuemailname.upper() in msg["to"]
+                and "Reset ACT Account Password" in msg["subject"]
+            ):
+                body = msg.get_payload()[0].get_payload()
+                print(body)
+                vcode = body[body.find("password code:") + 15:]
+                for j in range(0, len(vcode)):
+                    if vcode[j].isnumeric():
+                        vcode = vcode[j: j + 6]
+                        break
+                print (vcode)
+        except Exception:
+            continue
 
-ROOT.withdraw()
+    vcode = str(vcode)
+
+
+
+
+#@logTestName
+#def test_verification_code2():
+#    global vc
+#    vc = simpledialog.askstring(title="Verification Code",
+#                                      prompt="What's your Verification Code?:")
+#    # check it out
+#    print(vc)
+#    vc = str(vc)
+#ROOT = tk.Tk()
+
+#ROOT.withdraw()
     # the input dialog
 
 
@@ -277,10 +396,10 @@ def test_post_completeforgotpassword_ACT():
     variables = {
     "username": newuemailname,
     "newPassword": "Password1!!",
-    "verificationCode": vc
+    "verificationCode": vcode
     }
 
-    response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
+    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
     print(response.text)
     json_response = response.json()
     message = (json_response["data"]["completeForgotPassword"]["message"])
@@ -308,7 +427,7 @@ def test_post_loginwithnewpassword_ACT():
     "password": "Password1!!",
     }
 
-    response = requests.post('https://dev-aigr.act-et.org/graphql', json={'query': mutation, 'variables': variables})
+    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
     print(response.text)
     json_response = response.json()
     print(json_response["data"]["login"]["token"])

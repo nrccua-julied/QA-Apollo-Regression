@@ -1,0 +1,5 @@
+2021-09-20 at 14:46:04 | INFO | apollo_helpers.py::inner1
+2021-09-20 at 14:46:04 | INFO | POST /register - Positive Test
+2021-09-20 at 14:46:05 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert None
+ +  where None = <function match at 0x00000158A804D5E0>('You must be at least 13 years old', 'registerUser failed: error creating user account nrccua.signup+20210920144604@gmail.com {"response":{"statusCode":400...T account","error":"Bad Request"},"status":400,"message":"You must be at least 13 years old to create an ACT account"}')
+ +    where <function match at 0x00000158A804D5E0> = re.match

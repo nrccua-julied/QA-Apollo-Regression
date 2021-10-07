@@ -1,0 +1,3 @@
+2021-10-07 at 14:46:26 | INFO | apollo_helpers.py::inner1
+2021-10-07 at 14:46:26 | INFO | POST /register - Positive Test
+2021-10-07 at 14:46:56 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

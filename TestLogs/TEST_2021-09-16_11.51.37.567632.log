@@ -1,0 +1,14 @@
+2021-09-16 at 11:51:37 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 11:51:37 | INFO | POST /register - Positive Test
+2021-09-16 at 11:51:42 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 11:51:42 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 11:52:27 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 11:52:27 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 11:52:27 | INFO | POST /verifyuser - Positive Test
+2021-09-16 at 11:52:30 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 11:52:30 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 11:52:30 | INFO | POST /resendverification - Positive Test
+2021-09-16 at 11:52:32 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-16 at 11:52:32 | INFO | apollo_helpers.py::inner1
+2021-09-16 at 11:52:32 | INFO | POST /login - Positive Test
+2021-09-16 at 11:52:36 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

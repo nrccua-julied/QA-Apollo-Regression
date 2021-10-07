@@ -1,0 +1,3 @@
+2021-09-14 at 14:11:45 | INFO | apollo_helpers.py::inner1
+2021-09-14 at 14:11:45 | INFO | POST /resendverification - Positive Test
+2021-09-14 at 14:11:46 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert 400 == 200

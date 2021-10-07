@@ -1,0 +1,28 @@
+2021-09-22 at 12:19:40 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:19:40 | INFO | POST /login - Positive Test
+2021-09-22 at 12:19:46 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:19:46 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:19:46 | INFO | POST /profile - Positive Test
+2021-09-22 at 12:19:46 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:19:46 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:19:46 | INFO | POST /register - Positive Test
+2021-09-22 at 12:19:48 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:19:48 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:20:14 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:20:14 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:20:14 | INFO | POST /verifyuser - Positive Test
+2021-09-22 at 12:20:16 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:20:16 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:20:16 | INFO | POST /resendverification - Positive Test
+2021-09-22 at 12:20:21 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:20:21 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:20:21 | INFO | POST /forgotpassword - Positive Test
+2021-09-22 at 12:20:24 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:20:24 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:20:41 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:20:41 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:20:41 | INFO | POST /completeforgotpassword - Positive Test
+2021-09-22 at 12:20:43 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-09-22 at 12:20:43 | INFO | apollo_helpers.py::inner1
+2021-09-22 at 12:20:43 | INFO | POST /loginwithnewpassword - Positive Test
+2021-09-22 at 12:20:45 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

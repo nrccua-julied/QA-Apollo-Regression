@@ -1,0 +1,25 @@
+2021-10-07 at 16:28:54 | INFO | apollo_helpers.py::inner1
+2021-10-07 at 16:28:54 | INFO | POST /login - Positive Test
+2021-10-07 at 16:28:55 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-07 at 16:28:55 | INFO | apollo_helpers.py::inner1
+2021-10-07 at 16:28:55 | INFO | POST /profile - Positive Test
+2021-10-07 at 16:28:55 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-07 at 16:28:55 | INFO | apollo_helpers.py::inner1
+2021-10-07 at 16:28:55 | INFO | POST /useraccountexists - Positive Test
+2021-10-07 at 16:28:56 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-07 at 16:28:56 | INFO | apollo_helpers.py::inner1
+2021-10-07 at 16:28:56 | INFO | POST /postalcodeinfo - Positive Test
+2021-10-07 at 16:28:56 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-07 at 16:28:56 | INFO | apollo_helpers.py::inner1
+2021-10-07 at 16:28:56 | INFO | POST /register - Positive Test
+2021-10-07 at 16:29:20 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-07 at 16:29:20 | INFO | apollo_helpers.py::inner1
+2021-10-07 at 16:29:20 | INFO | POST /verifyuser - Positive Test
+2021-10-07 at 16:29:20 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'NoneType' object is not subscriptable
+2021-10-07 at 16:29:21 | INFO | apollo_helpers.py::inner1
+2021-10-07 at 16:29:21 | INFO | POST /resendverification - Positive Test
+2021-10-07 at 16:29:22 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-07 at 16:29:22 | INFO | apollo_helpers.py::inner1
+2021-10-07 at 16:29:22 | INFO | POST /forgotpassword - Positive Test
+2021-10-07 at 16:29:22 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert ('Cannot reset password for the user as there is no registered/verified email '\n 'or phone_number') == 'A password reset notification has been sent to your EMAIL'
+2021-10-07 at 16:29:22 | INFO | apollo_helpers.py::inner1

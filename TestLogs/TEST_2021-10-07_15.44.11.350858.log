@@ -1,0 +1,3 @@
+2021-10-07 at 15:44:11 | INFO | apollo_helpers.py::inner1
+2021-10-07 at 15:44:11 | INFO | POST /register1 - Positive Test
+2021-10-07 at 15:44:12 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'int' object is not subscriptable

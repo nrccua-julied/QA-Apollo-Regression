@@ -1,0 +1,19 @@
+2021-08-12 at 12:59:58 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 12:59:58 | INFO | POST /register - Positive Test
+2021-08-12 at 13:00:07 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-08-12 at 13:00:07 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 13:01:48 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-08-12 at 13:01:48 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 13:01:48 | INFO | POST /verify-user - Positive Test
+2021-08-12 at 13:01:48 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: name 'VC' is not defined
+2021-08-12 at 13:01:49 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 13:01:49 | INFO | POST /authenticatev2 - Positive Test
+2021-08-12 at 13:01:50 | WARNING | test_post_authenticatev2 -- dev: Return code not what was expected: 400 != 201
+2021-08-12 at 13:01:50 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: None
+2021-08-12 at 13:01:50 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 13:01:50 | INFO | POST /request-password - Positive Test
+2021-08-12 at 13:01:51 | WARNING | test_post_request_password -- dev: Return code not what was expected: 400 != 201
+2021-08-12 at 13:01:51 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: None
+2021-08-12 at 13:01:51 | INFO | apollo_helpers.py::inner1
+2021-08-12 at 13:01:51 | INFO | POST /confirm-password - Positive Test
+2021-08-12 at 13:01:51 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: name 'VC' is not defined
