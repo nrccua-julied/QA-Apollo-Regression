@@ -19,85 +19,6 @@ profileid = "0"
 vcode = ''
 
 @logTestName
-def test_post_login_ACT():
-    logger.info("POST /login - Positive Test")
-
-    mutation = """ mutation ($username: String!, $password: String!) 
-    {
-    login(input: {username:$username, password:$password})
-        {
-        token
-        profileId
-        }
-    }
-    """
-    variables = {
-    "username": "nrccua.signup+202108042@gmail.com",
-    "password": "Password1!"}
-
-    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
-    print(response.text)
-    json_response = response.json()
-    print (json_response["data"]["login"]["token"])
-    global token
-    token = (json_response["data"]["login"]["token"])
-    assert response.status_code == 200
-    assert (token != '')
-
-
-
-@logTestName
-def test_post_profile_ACT():
-    logger.info("POST /profile - Positive Test")
-    head = {
-        "Authorization": "bearer " + token
-    }
-
-    query = """ query 
-    {
-    myProfile 
-        {
-        profileId
-        userAccount
-            {
-            userName
-            isFederatedUser
-            identityProvider
-            actId
-            personId
-            }
-        identity
-            {
-            firstName
-            lastName
-            dateOfBirth
-            accountName
-            }
-        contact 
-            {
-            homeAddress
-                {
-                city
-                state
-                stateCode
-                countryCode
-                postalCode
-                }
-            email
-            }
-        }	
-    }
-    """
-
-    response = requests.post(apollo_helpers.graphQL, json={'query': query}, headers=head)
-    print(response.text)
-    json_response = response.json()
-    profileid = (json_response["data"]["myProfile"]["profileId"])
-    assert response.status_code == 200
-    assert (profileid != '')
-
-
-@logTestName
 def test_post_useraccountexists_ACT():
     logger.info("POST /useraccountexists - Positive Test")
 
@@ -224,18 +145,6 @@ def test_post_register_ACT():
 
     vcode = str(vcode)
 
-#@logTestName
-#def test_verification_code():
-#    global vc
-#    vc = simpledialog.askstring(title="Verification Code",
-#                                      prompt="What's your Verification Code?:")
-    # check it out
-#    print(vc)
-#    vc = str(vc)
-#ROOT = tk.Tk()
-
-#ROOT.withdraw()
-    # the input dialog
 
 
 
@@ -268,6 +177,84 @@ def test_post_verifyuser_ACT():
     assert (message == 'Account verified successfully')
 
 
+@logTestName
+def test_post_login_ACT():
+    logger.info("POST /login - Positive Test")
+
+    mutation = """ mutation ($username: String!, $password: String!) 
+    {
+    login(input: {username:$username, password:$password})
+        {
+        token
+        profileId
+        }
+    }
+    """
+    variables = {
+    "username": newuemailname,
+    "password": "Password1!"}
+
+    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
+    print(response.text)
+    json_response = response.json()
+    print (json_response["data"]["login"]["token"])
+    global token
+    token = (json_response["data"]["login"]["token"])
+    assert response.status_code == 200
+    assert (token != '')
+
+
+
+@logTestName
+def test_post_profile_ACT():
+    logger.info("POST /profile - Positive Test")
+    head = {
+        "Authorization": "bearer " + token
+    }
+
+    query = """ query 
+    {
+    myProfile 
+        {
+        profileId
+        userAccount
+            {
+            userName
+            isFederatedUser
+            identityProvider
+            actId
+            personId
+            }
+        identity
+            {
+            firstName
+            lastName
+            dateOfBirth
+            accountName
+            }
+        contact 
+            {
+            homeAddress
+                {
+                city
+                state
+                stateCode
+                countryCode
+                postalCode
+                }
+            email
+            }
+        }	
+    }
+    """
+
+    response = requests.post(apollo_helpers.graphQL, json={'query': query}, headers=head)
+    print(response.text)
+    json_response = response.json()
+    profileid = (json_response["data"]["myProfile"]["profileId"])
+    assert response.status_code == 200
+    assert (profileid != '')
+
 # @pytest.mark.skipif(apollo_helpers.ENVNAME == 'prod', reason='data creation')
 @logTestName
 def test_post_resendverification_ACT():
@@ -295,11 +282,6 @@ def test_post_resendverification_ACT():
     message = (json_response["data"]["resendUserAccountVerificationCode"]["message"])
     assert response.status_code == 200
     assert (message == 'Verification code resent successfully.')
-
-
-
-
-
 
 # @pytest.mark.skipif(apollo_helpers.ENVNAME == 'prod', reason='data creation')
 @logTestName
@@ -435,4 +417,27 @@ def test_post_loginwithnewpassword_ACT():
     assert response.status_code == 200
     assert (token != '')
 
+@logTestName
+def test_post_termsandconditions_ACT():
+    logger.info("POST /termsandconditions - Positive Test")
+
+
+    query = """ query 
+    {
+    termsAndConditions(privacyProgram:B2C_USER_ACCOUNT)
+        {
+        id,
+        terms,
+        privacyProgram
+        }
+    }"""
+
+    response = requests.post(apollo_helpers.graphQL, json={'query': query})
+    print(response.text)
+    json_response = response.json()
+    print(json_response["data"]["termsAndConditions"]["id"])
+    global id
+    id = (json_response["data"]["termsAndConditions"]["id"])
+    assert response.status_code == 200
+    assert (id == '2B51CDDB-9CD2-11E8-9D82-0A8F77C6E070')
 

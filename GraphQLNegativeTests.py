@@ -84,7 +84,7 @@ def test_post_register_ACT():
     message = (json_response["errors"][0]["message"])
     print(message)
     assert response.status_code == 200
-    assert re.match("registerUser failed", message)
+    assert re.match("Error: You must be at least 13 years old to create an ACT account", message)
     print (newuemailname)
 
 #Valid registration
@@ -99,18 +99,18 @@ def test_post_register2_ACT():
         email:$email
         firstName: "Test"
         lastName: "User"
-        middleName:"D"
+        middleName:""
         password:$password
         dateOfBirth:"12/30/2003"
         communicationPreference:EMAIL
-        addressCity:"Iowa City"
-        addressState:"Iowa"
-        addressStateCode:"IA"
-        addressCountry:"United States"
+        addressCity:""
+        addressState:""
+        addressStateCode:""
+        addressCountry:""
         addressCountryCode: "US"
         addressPostalCode: "52240"
-        addressStreet1: "111 2nd Street"
-        phone:"+123456789"
+        addressStreet1: ""
+        phone:""
         tncVersion: "2B51CDDB-9CD2-11E8-9D82-0A8F77C6E070"})
         {
         username
@@ -157,4 +157,55 @@ def test_post_login2_ACT():
     print (message)
     assert response.status_code == 200
     assert (message == 'User is not confirmed.')
+
+#user account exists
+@logTestName
+def test_post_useraccountexists_ACT():
+    logger.info("POST /useraccountexists - Positive Test")
+
+    query = """ query 
+    userAccountExists($username: String!)
+    {
+    userAccountExists(username: $username)
+    }
+    """
+    variables = {
+        "username": newuemailname}
+
+    response = requests.post(apollo_helpers.graphQL, json={'query': query, 'variables': variables})
+    print(response.text)
+    json_response = response.json()
+    print(json_response["data"]["userAccountExists"])
+    global status
+    status = (json_response["data"]["userAccountExists"])
+    assert response.status_code == 200
+    assert (status == True)
+
+
+def test_post_postalcodeinfo_ACT():
+    logger.info("POST /postalcodeinfo - Positive Test")
+
+    query = """ query 
+    postalCodeInfoQuery($postalCode: String!) 
+    {
+    postalCodeInfo(postalCode:$postalCode)
+        {
+        city
+        stateCode
+        postalCode
+        }
+    }
+    """
+    variables = {
+        "postalCode": "00000"}
+
+    response = requests.post(apollo_helpers.graphQL, json={'query': query, 'variables': variables})
+    print(response.text)
+    json_response = response.json()
+    print(json_response["data"]["postalCodeInfo"])
+    global sc
+    pci = (json_response["data"]["postalCodeInfo"])
+    assert response.status_code == 200
+    assert (pci == None)
+
 

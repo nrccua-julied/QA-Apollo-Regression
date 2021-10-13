@@ -1,0 +1,3 @@
+2021-10-12 at 13:10:08 | INFO | GraphQLNegativeTests.py::test_post_postalcodeinfo_ACT
+2021-10-12 at 13:10:08 | INFO | POST /postalcodeinfo - Positive Test
+2021-10-12 at 13:10:09 | INFO | PASSED: Test "GraphQLNegativeTests.py::test_post_postalcodeinfo_ACT" passed!

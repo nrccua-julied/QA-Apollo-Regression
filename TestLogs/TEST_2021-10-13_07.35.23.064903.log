@@ -1,0 +1,33 @@
+2021-10-13 at 07:35:23 | INFO | apollo_helpers.py::inner1
+2021-10-13 at 07:35:23 | INFO | POST /login - Positive Test
+2021-10-13 at 07:35:24 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-13 at 07:35:24 | INFO | apollo_helpers.py::inner1
+2021-10-13 at 07:35:24 | INFO | POST /profile - Positive Test
+2021-10-13 at 07:35:24 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-13 at 07:35:24 | INFO | apollo_helpers.py::inner1
+2021-10-13 at 07:35:24 | INFO | POST /useraccountexists - Positive Test
+2021-10-13 at 07:35:25 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-13 at 07:35:25 | INFO | apollo_helpers.py::inner1
+2021-10-13 at 07:35:25 | INFO | POST /postalcodeinfo - Positive Test
+2021-10-13 at 07:35:26 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-13 at 07:35:26 | INFO | apollo_helpers.py::inner1
+2021-10-13 at 07:35:26 | INFO | POST /register - Positive Test
+2021-10-13 at 07:35:52 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-13 at 07:35:52 | INFO | apollo_helpers.py::inner1
+2021-10-13 at 07:35:52 | INFO | POST /verifyuser - Positive Test
+2021-10-13 at 07:35:53 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-13 at 07:35:53 | INFO | apollo_helpers.py::inner1
+2021-10-13 at 07:35:53 | INFO | POST /resendverification - Positive Test
+2021-10-13 at 07:35:55 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-13 at 07:35:55 | INFO | apollo_helpers.py::inner1
+2021-10-13 at 07:35:55 | INFO | POST /forgotpassword - Positive Test
+2021-10-13 at 07:36:20 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-13 at 07:36:20 | INFO | apollo_helpers.py::inner1
+2021-10-13 at 07:36:20 | INFO | POST /completeforgotpassword - Positive Test
+2021-10-13 at 07:36:22 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-13 at 07:36:22 | INFO | apollo_helpers.py::inner1
+2021-10-13 at 07:36:22 | INFO | POST /loginwithnewpassword - Positive Test
+2021-10-13 at 07:36:23 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-13 at 07:36:23 | INFO | apollo_helpers.py::inner1
+2021-10-13 at 07:36:23 | INFO | POST /termsandconditions - Positive Test
+2021-10-13 at 07:36:23 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

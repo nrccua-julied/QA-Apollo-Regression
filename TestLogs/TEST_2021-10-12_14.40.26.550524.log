@@ -1,0 +1,18 @@
+2021-10-12 at 14:40:26 | INFO | GraphQLNegativeTests.py::test_post_postalcodeinfo_ACT
+2021-10-12 at 14:40:26 | INFO | POST /postalcodeinfo - Positive Test
+2021-10-12 at 14:40:26 | INFO | PASSED: Test "GraphQLNegativeTests.py::test_post_postalcodeinfo_ACT" passed!
+2021-10-12 at 14:40:26 | INFO | apollo_helpers.py::inner1
+2021-10-12 at 14:40:26 | INFO | POST /login - Positive Test
+2021-10-12 at 14:40:29 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-12 at 14:40:29 | INFO | apollo_helpers.py::inner1
+2021-10-12 at 14:40:29 | INFO | POST /register - Positive Test
+2021-10-12 at 14:40:32 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-12 at 14:40:32 | INFO | apollo_helpers.py::inner1
+2021-10-12 at 14:40:32 | INFO | POST /register2 - Positive Test
+2021-10-12 at 14:40:38 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-12 at 14:40:38 | INFO | apollo_helpers.py::inner1
+2021-10-12 at 14:40:38 | INFO | POST /login2 - Positive Test
+2021-10-12 at 14:40:38 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-12 at 14:40:38 | INFO | apollo_helpers.py::inner1
+2021-10-12 at 14:40:38 | INFO | POST /useraccountexists - Positive Test
+2021-10-12 at 14:40:39 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert True == 'true'

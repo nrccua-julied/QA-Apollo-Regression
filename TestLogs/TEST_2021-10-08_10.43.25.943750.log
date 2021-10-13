@@ -1,0 +1,14 @@
+2021-10-08 at 10:43:25 | INFO | apollo_helpers.py::inner1
+2021-10-08 at 10:43:25 | INFO | POST /login - Positive Test
+2021-10-08 at 10:43:26 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-08 at 10:43:26 | INFO | apollo_helpers.py::inner1
+2021-10-08 at 10:43:26 | INFO | POST /register - Positive Test
+2021-10-08 at 10:43:28 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert None
+ +  where None = <function match at 0x0000025C95FF7670>('registerUser failed', 'Error: You must be at least 13 years old to create an ACT account')
+ +    where <function match at 0x0000025C95FF7670> = re.match
+2021-10-08 at 10:43:28 | INFO | apollo_helpers.py::inner1
+2021-10-08 at 10:43:28 | INFO | POST /register2 - Positive Test
+2021-10-08 at 10:43:31 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-08 at 10:43:31 | INFO | apollo_helpers.py::inner1
+2021-10-08 at 10:43:31 | INFO | POST /login2 - Positive Test
+2021-10-08 at 10:43:32 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

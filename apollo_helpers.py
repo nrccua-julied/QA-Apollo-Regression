@@ -7,7 +7,7 @@ from notifiers import get_notifier
 from datetime import datetime
 
 # retrieve environment label
-ENVNAME = os.getenv('ENV', 'dev')
+ENVNAME = os.getenv('ENV', 'stage')
 #USRTYPE = os.getenv('USR', 'stage')
 
 
