@@ -18,32 +18,6 @@ token = "0"
 profileid = "0"
 vcode = ''
 
-@logTestName
-def test_post_UpdateLearnerMilestoneStatusInput():
-    logger.info("POST /UpdateLearnerMilestoneStatusInput - Positive Test")
-
-    mutation = """ mutation ($profileId: ID!, $milestone: ID!)
-    {
-      updateLearnerMilestoneStatus(input: {
-        status: COMPLETED,
-        milestoneUid: $milestone,
-        profileId: $profileId
-      })
-    }"""
-
-    variables = {
-    "updateLearnerMilestoneStatus": "null",
-    "milestone":"4c50d557-7f47-407a-a8dc-3ace80470763",
-    "profileId": "616db9172000007f4df57a7e"
-    }
-
-
-    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
-    print(response.text)
-    json_response = response.json()
-    message = (json_response["data"]["verifyUser"]["message"])
-    assert response.status_code == 200
-    assert (message == 'Account verified successfully')
 
 
 ##########Activates the user based on the Verification Code found in the DB query####################
