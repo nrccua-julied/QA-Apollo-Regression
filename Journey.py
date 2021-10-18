@@ -20,7 +20,7 @@ vcode = ''
 
 
 
-##########Activates the user based on the Verification Code found in the DB query####################
+##########Query the milestone table and send variable to Journeys mutation####################
 @logTestName
 def test_encourage_post_queryMilestoneTable():
     logger.info("POST /queryMilestoneTable - Positive Test")
