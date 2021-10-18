@@ -181,7 +181,7 @@ def test_post_useraccountexists_ACT():
     assert response.status_code == 200
     assert (status == True)
 
-
+#Invalid Postal Code
 def test_post_postalcodeinfo_ACT():
     logger.info("POST /postalcodeinfo - Positive Test")
 

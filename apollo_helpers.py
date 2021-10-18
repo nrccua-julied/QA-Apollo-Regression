@@ -7,7 +7,7 @@ from notifiers import get_notifier
 from datetime import datetime
 
 # retrieve environment label
-ENVNAME = os.getenv('ENV', 'stage')
+ENVNAME = os.getenv('ENV', 'dev')
 #USRTYPE = os.getenv('USR', 'stage')
 
 
@@ -21,6 +21,11 @@ config.read('envconfig.ini')
 environ = config[ENVNAME]['xApiKey']
 envUrl = config[ENVNAME]['baseUrl']
 graphQL = config[ENVNAME]['graphQLurl']
+pguser = config[ENVNAME]['dbuser']
+pgpassword = config[ENVNAME]['dbpassword']
+pghost = config[ENVNAME]['dbhost']
+pgport = config[ENVNAME]['dbport']
+pgdatabase = config[ENVNAME]['dbdatabase']
 
 # name of test in progress
 TESTNAME = ''
