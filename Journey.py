@@ -19,6 +19,32 @@ profileid = "0"
 vcode = ''
 
 
+@logTestName
+def test_post_login_ACT():
+    logger.info("POST /login - Positive Test")
+
+    mutation = """ mutation ($username: String!, $password: String!) 
+    {
+    login(input: {username:$username, password:$password})
+        {
+        token
+        profileId
+        }
+    }
+    """
+    variables = {
+    "username": "nrccua.signup@gmail.com",
+    "password": "Password1!"}
+
+    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
+    print(response.text)
+    json_response = response.json()
+    print (json_response["data"]["login"]["token"])
+    global token
+    token = (json_response["data"]["login"]["token"])
+    assert response.status_code == 200
+    assert (token != '')
+
 
 ##########Query the milestone table and send variable to Journeys mutation####################
 @logTestName
@@ -51,6 +77,9 @@ def test_encourage_post_queryMilestoneTable():
             print(x[0])
             milestoneUID = (x[0])
 
+            head = {
+                "Authorization": "bearer " + token
+            }
             mutation = """ mutation ($profileId: ID!, $milestone: ID!)
                 {
                   updateLearnerMilestoneStatus(input: {
@@ -66,7 +95,7 @@ def test_encourage_post_queryMilestoneTable():
                 "profileId": "616db9172000007f4df57a7e"
             }
 
-            response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
+            response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables}, headers=head)
             print(response.text)
 
     except (Exception, psycopg2.Error) as error:
