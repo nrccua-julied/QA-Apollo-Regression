@@ -2,23 +2,12 @@ import apollo_helpers
 from apollo_helpers import get, post, put, delete, responseTest, responseNegTest, logBody, logTestName
 from loguru import logger
 import psycopg2
-import tkinter as tk
-from tkinter import simpledialog
-import datetime
 import requests
-import imaplib
-import smtplib
-import email
-import time
-import json
-TS = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
-newuemailname = "nrccua.signup+" + TS + "@gmail.com"
-vc = "123456"
 token = "0"
 profileid = "0"
 vcode = ''
 
-
+#UPDATE username and password and STATUS below to run script
 @logTestName
 def test_post_login_ACT():
     logger.info("POST /login - Positive Test")
@@ -40,8 +29,11 @@ def test_post_login_ACT():
     print(response.text)
     json_response = response.json()
     print (json_response["data"]["login"]["token"])
+    print (json_response["data"]["login"]["profileId"])
     global token
+    global profileid
     token = (json_response["data"]["login"]["token"])
+    profileid = (json_response["data"]["login"]["profileId"])
     assert response.status_code == 200
     assert (token != '')
 
@@ -80,10 +72,11 @@ def test_encourage_post_queryMilestoneTable():
             head = {
                 "Authorization": "bearer " + token
             }
+            #COMPLETED, NOT_APPLICABLE, IN_PROGRESS, NOT_STARTED
             mutation = """ mutation ($profileId: ID!, $milestone: ID!)
                 {
                   updateLearnerMilestoneStatus(input: {
-                    status: COMPLETED,
+                    status: NOT_APPLICABLE,
                     milestoneUid: $milestone,
                     profileId: $profileId
                   })
@@ -92,7 +85,7 @@ def test_encourage_post_queryMilestoneTable():
             variables = {
                 "updateLearnerMilestoneStatus": "null",
                 "milestone": milestoneUID,
-                "profileId": "616db9172000007f4df57a7e"
+                "profileId": profileid
             }
 
             response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables}, headers=head)

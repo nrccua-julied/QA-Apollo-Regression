@@ -132,7 +132,7 @@ def test_post_register2_ACT():
     assert (profileID != '')
     print(newuemailname)
 
-#Trying to login with out account validation
+#Trying to login without account validation
 @logTestName
 def test_post_login2_ACT():
     logger.info("POST /login2 - Positive Test")
@@ -209,3 +209,82 @@ def test_post_postalcodeinfo_ACT():
     assert (pci == None)
 
 
+#Verify user - invalid verification code
+@logTestName
+def test_verify_user_invalid():
+    logger.info("POST /verifyuserinvalid - Positive Test")
+
+    mutation = """ mutation ($username: String!, $verificationCode: String!) {
+    verifyUser(input:{
+        username:$username,
+        verificationCode:$verificationCode
+        })
+        {
+        message
+        }
+    }
+    """
+    variables = {
+    "username": newuemailname,
+    "verificationCode": "111111"}
+
+    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
+    print(response.text)
+    json_response = response.json()
+    message = (json_response["errors"][0]["message"])
+    print (message)
+    assert response.status_code == 200
+    assert (message == 'Verification not successful. Invalid verification code provided, please try again.')
+
+
+#Verify user - invalid user
+@logTestName
+def test_verify_user_invalid2():
+    logger.info("POST /verifyuserinvalid2 - Positive Test")
+
+    mutation = """ mutation ($username: String!, $verificationCode: String!) {
+    verifyUser(input:{
+        username:$username,
+        verificationCode:$verificationCode
+        })
+        {
+        message
+        }
+    }
+    """
+    variables = {
+    "username": "x@x.com",
+    "verificationCode": "111111"}
+
+    response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
+    print(response.text)
+    json_response = response.json()
+    message = (json_response["errors"][0]["message"])
+    print (message)
+    assert response.status_code == 200
+    assert (message == 'Verification not successful. User does not exist.')
+
+# Forgot Password - invalid user
+#@logTestName
+#def test_forgot_password_invalid():
+#    logger.info("POST /forgotpasswordinvalid - Positive Test")
+
+#    mutation = """ mutation ($username: String!) {
+#      forgotPassword(input: {
+#        username:$username
+#       }) {
+#
+#         message
+#       }
+#     }
+#     """
+#     variables = {
+#     "username": "x@x.x"}
+#
+#     response = requests.post(apollo_helpers.graphQL, json={'query': mutation, 'variables': variables})
+#     print(response.text)
+#     json_response = response.json()
+#     message = (json_response["data"]["forgotPassword"])
+#     print(message)
+#     assert response.status_code == 200
+#     assert (message == 'Cannot reset password for the user as there is no registered/verified email or phone_number')
