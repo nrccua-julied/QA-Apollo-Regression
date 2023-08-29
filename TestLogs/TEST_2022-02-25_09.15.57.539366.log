@@ -1,0 +1,3 @@
+2022-02-25 at 09:15:57 | INFO | apollo_helpers.py::inner1
+2022-02-25 at 09:15:57 | INFO | POST /queryMilestoneTable - Positive Test
+2022-02-25 at 09:15:57 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: local variable 'connection' referenced before assignment

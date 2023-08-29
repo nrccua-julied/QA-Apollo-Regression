@@ -1,0 +1,3 @@
+2021-10-19 at 16:50:55 | INFO | apollo_helpers.py::inner1
+2021-10-19 at 16:50:55 | INFO | POST /forgotpasswordinvalid - Positive Test
+2021-10-19 at 16:50:56 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert {'message': 'Cannot reset password for the user as there is no '\n            'registered/verified email or phone_number'} == ("{'message': 'Cannot reset password for the user as there is no "\n "registered/verified email or phone_number'}")

@@ -1,0 +1,5 @@
+2022-10-25 at 16:07:18 | INFO | apollo_helpers.py::inner1
+2022-10-25 at 16:07:18 | INFO | POST /login - Positive Test
+2022-10-25 at 16:07:19 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'accessToken'
+2022-10-25 at 16:07:19 | INFO | apollo_helpers.py::inner1
+2022-10-25 at 16:07:19 | INFO | POST /queryMilestoneTable - Positive Test

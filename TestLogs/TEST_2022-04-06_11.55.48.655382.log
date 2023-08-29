@@ -1,0 +1,5 @@
+2022-04-06 at 11:55:48 | INFO | apollo_helpers.py::inner1
+2022-04-06 at 11:55:48 | INFO | POST /login - Positive Test
+2022-04-06 at 11:55:49 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'data'
+2022-04-06 at 11:55:49 | INFO | apollo_helpers.py::inner1
+2022-04-06 at 11:55:49 | INFO | POST /queryMilestoneTable - Positive Test

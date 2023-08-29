@@ -109,7 +109,7 @@ def logAlert(name, text):
 def heads():
     return {
         'Content-Type': 'application/json',
-        'x-api-key': environ,
+        'apollographql-client-name': 'ENCOURAGE'
     }
 
 

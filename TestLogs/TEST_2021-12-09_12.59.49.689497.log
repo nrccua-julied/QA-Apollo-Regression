@@ -1,0 +1,33 @@
+2021-12-09 at 12:59:49 | INFO | apollo_helpers.py::inner1
+2021-12-09 at 12:59:49 | INFO | POST /useraccountexists - Positive Test
+2021-12-09 at 12:59:52 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-12-09 at 12:59:52 | INFO | apollo_helpers.py::inner1
+2021-12-09 at 12:59:52 | INFO | POST /postalcodeinfo - Positive Test
+2021-12-09 at 12:59:52 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-12-09 at 12:59:52 | INFO | apollo_helpers.py::inner1
+2021-12-09 at 12:59:52 | INFO | POST /register - Positive Test
+2021-12-09 at 13:00:30 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-12-09 at 13:00:30 | INFO | apollo_helpers.py::inner1
+2021-12-09 at 13:00:30 | INFO | POST /verifyuser - Positive Test
+2021-12-09 at 13:00:33 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-12-09 at 13:00:33 | INFO | apollo_helpers.py::inner1
+2021-12-09 at 13:00:33 | INFO | POST /login - Positive Test
+2021-12-09 at 13:00:44 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'NoneType' object is not subscriptable
+2021-12-09 at 13:00:44 | INFO | apollo_helpers.py::inner1
+2021-12-09 at 13:00:44 | INFO | POST /profile - Positive Test
+2021-12-09 at 13:00:44 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'NoneType' object is not subscriptable
+2021-12-09 at 13:00:44 | INFO | apollo_helpers.py::inner1
+2021-12-09 at 13:00:44 | INFO | POST /resendverification - Positive Test
+2021-12-09 at 13:00:47 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-12-09 at 13:00:47 | INFO | apollo_helpers.py::inner1
+2021-12-09 at 13:00:47 | INFO | POST /forgotpassword - Positive Test
+2021-12-09 at 13:01:13 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-12-09 at 13:01:13 | INFO | apollo_helpers.py::inner1
+2021-12-09 at 13:01:13 | INFO | POST /completeforgotpassword - Positive Test
+2021-12-09 at 13:01:16 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-12-09 at 13:01:16 | INFO | apollo_helpers.py::inner1
+2021-12-09 at 13:01:16 | INFO | POST /loginwithnewpassword - Positive Test
+2021-12-09 at 13:01:27 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'NoneType' object is not subscriptable
+2021-12-09 at 13:01:27 | INFO | apollo_helpers.py::inner1
+2021-12-09 at 13:01:27 | INFO | POST /termsandconditions - Positive Test
+2021-12-09 at 13:01:30 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

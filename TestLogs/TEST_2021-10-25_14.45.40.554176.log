@@ -1,0 +1,5 @@
+2021-10-25 at 14:45:40 | INFO | apollo_helpers.py::inner1
+2021-10-25 at 14:45:40 | INFO | POST /register - Positive Test
+2021-10-25 at 14:45:41 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert None
+ +  where None = <function match at 0x000002B27442D5E0>('Error: You must be at least 13 years old to create an ACT account', 'BadRequestException: You must be at least 13 years old to create an ACT account')
+ +    where <function match at 0x000002B27442D5E0> = re.match

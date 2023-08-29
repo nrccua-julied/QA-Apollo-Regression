@@ -1,0 +1,26 @@
+2021-10-25 at 14:27:38 | INFO | GraphQLNegativeTests.py::test_post_postalcodeinfo_ACT
+2021-10-25 at 14:27:38 | INFO | POST /postalcodeinfo - Positive Test
+2021-10-25 at 14:27:39 | INFO | PASSED: Test "GraphQLNegativeTests.py::test_post_postalcodeinfo_ACT" passed!
+2021-10-25 at 14:27:39 | INFO | apollo_helpers.py::inner1
+2021-10-25 at 14:27:39 | INFO | POST /login - Positive Test
+2021-10-25 at 14:27:39 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-25 at 14:27:39 | INFO | apollo_helpers.py::inner1
+2021-10-25 at 14:27:39 | INFO | POST /register - Positive Test
+2021-10-25 at 14:27:40 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert None
+ +  where None = <function match at 0x000001FEE85D7670>('Error: You must be at least 13 years old to create an ACT account', 'BadRequestException: You must be at least 13 years old to create an ACT account')
+ +    where <function match at 0x000001FEE85D7670> = re.match
+2021-10-25 at 14:27:40 | INFO | apollo_helpers.py::inner1
+2021-10-25 at 14:27:40 | INFO | POST /register2 - Positive Test
+2021-10-25 at 14:27:43 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-25 at 14:27:43 | INFO | apollo_helpers.py::inner1
+2021-10-25 at 14:27:43 | INFO | POST /login2 - Positive Test
+2021-10-25 at 14:27:43 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-25 at 14:27:43 | INFO | apollo_helpers.py::inner1
+2021-10-25 at 14:27:43 | INFO | POST /useraccountexists - Positive Test
+2021-10-25 at 14:27:44 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-25 at 14:27:44 | INFO | apollo_helpers.py::inner1
+2021-10-25 at 14:27:44 | INFO | POST /verifyuserinvalid - Positive Test
+2021-10-25 at 14:27:45 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-25 at 14:27:45 | INFO | apollo_helpers.py::inner1
+2021-10-25 at 14:27:45 | INFO | POST /verifyuserinvalid2 - Positive Test
+2021-10-25 at 14:27:45 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

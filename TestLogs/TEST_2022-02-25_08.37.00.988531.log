@@ -1,0 +1,6 @@
+2022-02-25 at 08:37:00 | INFO | apollo_helpers.py::inner1
+2022-02-25 at 08:37:00 | INFO | POST /login - Positive Test
+2022-02-25 at 08:37:01 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'NoneType' object is not subscriptable
+2022-02-25 at 08:37:01 | INFO | apollo_helpers.py::inner1
+2022-02-25 at 08:37:01 | INFO | POST /queryMilestoneTable - Positive Test
+2022-02-25 at 08:37:40 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

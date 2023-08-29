@@ -80,18 +80,12 @@ def test_post_register_ACT():
         email:$email
         firstName: "Test"
         lastName: "User"
-        middleName:""
         password:$password
         dateOfBirth:"12/30/2001"
         communicationPreference:EMAIL
-        addressCity:""
-        addressState:""
-        addressStateCode:""
-        addressCountry:""
+        addressCountry:"United States"
         addressCountryCode: "US"
         addressPostalCode: "52240"
-        addressStreet1: ""
-        phone:""
         tncVersion: "2B51CDDB-9CD2-11E8-9D82-0A8F77C6E070"})
         {
         username

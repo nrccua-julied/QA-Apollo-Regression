@@ -84,7 +84,7 @@ def test_post_register_ACT():
     message = (json_response["errors"][0]["message"])
     print(message)
     assert response.status_code == 200
-    assert re.match("Error: You must be at least 13 years old to create an ACT account", message)
+    assert re.match("BadRequestException: You must be at least 13 years old to create an ACT account", message)
     print (newuemailname)
 
 #Valid registration
@@ -99,18 +99,12 @@ def test_post_register2_ACT():
         email:$email
         firstName: "Test"
         lastName: "User"
-        middleName:""
         password:$password
         dateOfBirth:"12/30/2003"
         communicationPreference:EMAIL
-        addressCity:""
-        addressState:""
-        addressStateCode:""
-        addressCountry:""
+        addressCountry:"United States"
         addressCountryCode: "US"
         addressPostalCode: "52240"
-        addressStreet1: ""
-        phone:""
         tncVersion: "2B51CDDB-9CD2-11E8-9D82-0A8F77C6E070"})
         {
         username

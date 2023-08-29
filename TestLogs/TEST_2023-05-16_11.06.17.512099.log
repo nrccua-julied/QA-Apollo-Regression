@@ -1,0 +1,6 @@
+2023-05-16 at 11:06:17 | INFO | apollo_helpers.py::inner1
+2023-05-16 at 11:06:17 | INFO | POST /login - Positive Test
+2023-05-16 at 11:06:20 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: 'accessToken'
+2023-05-16 at 11:06:20 | INFO | apollo_helpers.py::inner1
+2023-05-16 at 11:06:20 | INFO | POST /queryMilestoneTable - Positive Test
+2023-05-16 at 11:06:21 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: local variable 'connection' referenced before assignment

@@ -1,0 +1,3 @@
+2022-02-25 at 09:14:42 | INFO | apollo_helpers.py::inner1
+2022-02-25 at 09:14:42 | INFO | POST /login - Positive Test
+2022-02-25 at 09:14:43 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

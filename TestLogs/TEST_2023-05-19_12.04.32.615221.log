@@ -1,0 +1,6 @@
+2023-05-19 at 12:04:32 | INFO | apollo_helpers.py::inner1
+2023-05-19 at 12:04:32 | INFO | POST /login - Positive Test
+2023-05-19 at 12:04:51 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: ('Connection aborted.', TimeoutError(10060, 'A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond', None, 10060, None))
+2023-05-19 at 12:04:52 | INFO | apollo_helpers.py::inner1
+2023-05-19 at 12:04:52 | INFO | POST /updateLearnerMilestoneStatus - Positive Test
+2023-05-19 at 12:05:11 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: ('Connection aborted.', TimeoutError(10060, 'A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond', None, 10060, None))

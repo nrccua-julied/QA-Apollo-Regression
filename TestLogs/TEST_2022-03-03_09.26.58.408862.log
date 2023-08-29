@@ -1,0 +1,6 @@
+2022-03-03 at 09:26:58 | INFO | apollo_helpers.py::inner1
+2022-03-03 at 09:26:58 | INFO | POST /login - Positive Test
+2022-03-03 at 09:26:59 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2022-03-03 at 09:26:59 | INFO | apollo_helpers.py::inner1
+2022-03-03 at 09:26:59 | INFO | POST /queryMilestoneTable - Positive Test
+2022-03-03 at 09:27:49 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!

@@ -1,0 +1,3 @@
+2023-05-17 at 10:18:00 | INFO | apollo_helpers.py::inner1
+2023-05-17 at 10:18:00 | INFO | POST /updateLearnerMilestoneStatus - Positive Test
+2023-05-17 at 10:18:00 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: can only concatenate str (not "int") to str

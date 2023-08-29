@@ -1,0 +1,27 @@
+2021-10-19 at 08:42:31 | INFO | GraphQLNegativeTests.py::test_post_postalcodeinfo_ACT
+2021-10-19 at 08:42:31 | INFO | POST /postalcodeinfo - Positive Test
+2021-10-19 at 08:42:31 | INFO | PASSED: Test "GraphQLNegativeTests.py::test_post_postalcodeinfo_ACT" passed!
+2021-10-19 at 08:42:31 | INFO | apollo_helpers.py::inner1
+2021-10-19 at 08:42:31 | INFO | POST /login - Positive Test
+2021-10-19 at 08:42:32 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-19 at 08:42:32 | INFO | apollo_helpers.py::inner1
+2021-10-19 at 08:42:32 | INFO | POST /register - Positive Test
+2021-10-19 at 08:42:32 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-19 at 08:42:32 | INFO | apollo_helpers.py::inner1
+2021-10-19 at 08:42:32 | INFO | POST /register2 - Positive Test
+2021-10-19 at 08:42:34 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-19 at 08:42:34 | INFO | apollo_helpers.py::inner1
+2021-10-19 at 08:42:34 | INFO | POST /login2 - Positive Test
+2021-10-19 at 08:42:35 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-19 at 08:42:35 | INFO | apollo_helpers.py::inner1
+2021-10-19 at 08:42:35 | INFO | POST /useraccountexists - Positive Test
+2021-10-19 at 08:42:35 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-19 at 08:42:35 | INFO | apollo_helpers.py::inner1
+2021-10-19 at 08:42:35 | INFO | POST /verifyuserinvalid - Positive Test
+2021-10-19 at 08:42:36 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-19 at 08:42:36 | INFO | apollo_helpers.py::inner1
+2021-10-19 at 08:42:36 | INFO | POST /verifyuserinvalid2 - Positive Test
+2021-10-19 at 08:42:36 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-10-19 at 08:42:36 | INFO | apollo_helpers.py::inner1
+2021-10-19 at 08:42:36 | INFO | POST /forgotpasswordinvalid - Positive Test
+2021-10-19 at 08:42:37 | WARNING | FAILED: Test "apollo_helpers.py::inner1" Failed with: assert None == ('Cannot reset password for the user as there is no registered/verified email '\n 'or phone_number')

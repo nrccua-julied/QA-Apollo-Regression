@@ -1,0 +1,24 @@
+2021-11-22 at 16:34:22 | INFO | GraphQLNegativeTests.py::test_post_postalcodeinfo_ACT
+2021-11-22 at 16:34:22 | INFO | POST /postalcodeinfo - Positive Test
+2021-11-22 at 16:34:23 | INFO | PASSED: Test "GraphQLNegativeTests.py::test_post_postalcodeinfo_ACT" passed!
+2021-11-22 at 16:34:23 | INFO | apollo_helpers.py::inner1
+2021-11-22 at 16:34:23 | INFO | POST /login - Positive Test
+2021-11-22 at 16:34:25 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-11-22 at 16:34:25 | INFO | apollo_helpers.py::inner1
+2021-11-22 at 16:34:25 | INFO | POST /register - Positive Test
+2021-11-22 at 16:34:29 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-11-22 at 16:34:29 | INFO | apollo_helpers.py::inner1
+2021-11-22 at 16:34:29 | INFO | POST /register2 - Positive Test
+2021-11-22 at 16:34:34 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-11-22 at 16:34:34 | INFO | apollo_helpers.py::inner1
+2021-11-22 at 16:34:34 | INFO | POST /login2 - Positive Test
+2021-11-22 at 16:34:35 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-11-22 at 16:34:35 | INFO | apollo_helpers.py::inner1
+2021-11-22 at 16:34:35 | INFO | POST /useraccountexists - Positive Test
+2021-11-22 at 16:34:35 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-11-22 at 16:34:35 | INFO | apollo_helpers.py::inner1
+2021-11-22 at 16:34:35 | INFO | POST /verifyuserinvalid - Positive Test
+2021-11-22 at 16:34:37 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
+2021-11-22 at 16:34:37 | INFO | apollo_helpers.py::inner1
+2021-11-22 at 16:34:37 | INFO | POST /verifyuserinvalid2 - Positive Test
+2021-11-22 at 16:34:38 | INFO | PASSED: Test "apollo_helpers.py::inner1" passed!
